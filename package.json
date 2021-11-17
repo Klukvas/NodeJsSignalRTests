@@ -4,7 +4,7 @@
   "description": "Tests of first message from everyhub of signalR",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test.js --timeout 30000 --no-deprecation"
+    "test": "mocha test.js --timeout 30000"
   },
   "repository": {
     "type": "git",
