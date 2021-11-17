@@ -1,0 +1,29 @@
+{
+  "name": "nodejssignalrtests",
+  "version": "1.0.0",
+  "description": "Tests of first message from everyhub of signalR",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js --timeout 30000 --no-deprecation"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Klukvas/NodeJsSignalRTests.git"
+  },
+  "keywords": [
+    "signalR",
+    "mochai"
+  ],
+  "author": "@klukvas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Klukvas/NodeJsSignalRTests/issues"
+  },
+  "homepage": "https://github.com/Klukvas/NodeJsSignalRTests#readme",
+  "dependencies": {
+    "@microsoft/signalr": "^6.0.0",
+    "axios": "^0.24.0",
+    "chai": "^4.3.4",
+    "mocha": "^9.1.3"
+  }
+}
