@@ -3,6 +3,7 @@ const signalR = require("@microsoft/signalr");
 const axios = require('axios');
 require('dotenv').config();
 class Connector{
+
     constructor(){
         this.server_url = process.env.server_url
         this.auth_url = process.env.auth_url
@@ -10,6 +11,7 @@ class Connector{
         this.password = process.env.password
         this.messages = {}
     }
+
     async get_auth_token() {   
         const user_data = {
             email: this.email,
@@ -36,12 +38,12 @@ class Connector{
             .build();
         return connection;
     };
+
     async config_connection(token){
         const connection = this.create_connection();
         connection.on("welcome", (res) => {
             this.messages['welcome'] = res
             connection.off('welcome')
-            
         });
         connection.on("asset-list", (res) => {
             this.messages['asset-list'] = res
@@ -98,7 +100,7 @@ class Connector{
         });
 
         await connection.start();
-        await connection.send('init', token);        
+        await connection.send('init', token, 'en');        
         return new Promise((resolve) => {
             let counter = 0;
             let intervalId = setInterval(() => {

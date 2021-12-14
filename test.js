@@ -2,7 +2,9 @@ const signalR = require("@microsoft/signalr");
 var Connector = require('./index')
 var expect = require('chai').expect
 require('dotenv').config();
-
+// var Mocha = require('mocha');
+// var mocha = new Mocha({});
+// mocha.setup('bdd');
 
 describe('Tests of auth(login)', () => {
     before(async () => {
@@ -19,6 +21,7 @@ describe('Tests of auth(login)', () => {
 describe('Tests of messages from signalR hubs', () => {
     let signalClass;
     let messagesObject;
+
     before(async () => {
         clientId = process.env.clientId
         clientWalletId = process.env.clientWalletId
@@ -255,3 +258,5 @@ describe('Tests of messages from signalR hubs', () => {
     });
 
 });
+
+// mocha.run()
